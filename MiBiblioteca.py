@@ -29,20 +29,23 @@ def solicitar_y_validar_cadena(
 
 def generar_menu(
         items:str, opciones:list,
-        mensaje:str=f"\nSeleccione una de las opciones disponibles: "
+        mensaje:str=f"\nSeleccione una de las opciones disponibles: ",
+        mensaje_error:str=""       
         ):
     """
     Esta función muestra por consola un menú de opciones que el usuario puede
     seleccionar, y solicita al usuario que seleccione una de las disponibles.
-    Recibe: Los items de cada una de las opciones, las opciones en sí, y un 
-    mensaje que mostrar al usuario.
+    Recibe: Los items de cada una de las opciones, las opciones en sí, un 
+    mensaje opcional que mostrar al usuario, y un mensaje opcional en caso de error.
     Retorna: La opcion seleccionada por el usuario una vez validada.
     """
     print("-------------------------MENÚ-------------------------------------")
+    print("Opciones disponibles: ")
+    print()
     for i in range(len(opciones)):
         print(f"|               {items[i]}) {opciones[i]}")
     print("------------------------------------------------------------------")
-    opcion_seleccionada = solicitar_y_validar_cadena(mensaje,items,1)
+    opcion_seleccionada = solicitar_y_validar_cadena(mensaje,items,1,mensaje_error)
     print("------------------------------------------------------------------")
     print(f"\n\n")
     return opcion_seleccionada
