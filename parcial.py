@@ -13,7 +13,8 @@ while True:
     opcion_seleccionada = generar_menu( "ABCDEFGHI",
         ["Ingresar numero", "Generar lista", "Mostrar lista", "Ingresar una letra",
          "Ordenar lista", "Ingresar tamaño de matriz", "Generar matriz", 
-         "Mostrar matriz", "Salir"]
+         "Mostrar matriz", "Salir"],
+         mensaje_error="[ERROR] Debe seleccionar una de las opciones disponibles."
         )
     
     match opcion_seleccionada:
