@@ -100,8 +100,5 @@ while True:
         case "I":
             break
         case _:
-            print(
-                "[ERROR] La opción seleccionada esta fuera " 
-                "del rango de las opciones disponibles"
-                )
+            print("[ERROR] Opcion inválida")
 
